@@ -169,19 +169,36 @@ public class HomePage {
     // ----- Carousels & navigation -----
 
     public void ClickLiveClassNext() {
-        wait.until(ExpectedConditions.elementToBeClickable(LiveClassNextButton)).click();
+        WebElement el = wait.until(ExpectedConditions.elementToBeClickable(LiveClassNextButton));
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+        ((JavascriptExecutor) driver)
+            .executeScript("arguments[0].click();", el);
+        
     }
 
     public void ClickLiveClassPrev() {
-        wait.until(ExpectedConditions.elementToBeClickable(LiveClassPrevButton)).click();
+        WebElement el = wait.until(ExpectedConditions.elementToBeClickable(LiveClassPrevButton));
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+        ((JavascriptExecutor) driver)
+            .executeScript("arguments[0].click();", el);
     }
 
     public void ClickSelfPlacedCourseNextButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(SelfPlacedCourseNextButton)).click();
+        WebElement el  = wait.until(ExpectedConditions.elementToBeClickable(SelfPlacedCourseNextButton));
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+        ((JavascriptExecutor) driver)
+            .executeScript("arguments[0].click();", el);
     }
 
     public void ClickSelfPlacedCoursePrevButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(SelfPlacedCoursePrevButton)).click();
+        WebElement el = wait.until(ExpectedConditions.elementToBeClickable(SelfPlacedCoursePrevButton));
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+        ((JavascriptExecutor) driver)
+            .executeScript("arguments[0].click();", el);
     }
 
     public void ClickPracticeNextButton() {
