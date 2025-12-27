@@ -60,7 +60,7 @@
       <version>3.2.5</version>
       <configuration>
         <suiteXmlFiles>
-          <suiteXmlFile>KodLogin.xml</suiteXmlFile>
+          <suiteXmlFile>src/test/resources/KodLogin.xml</suiteXmlFile>
         </suiteXmlFiles>
       </configuration>
     </plugin>
