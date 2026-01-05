@@ -306,6 +306,7 @@ public class HomePage {
     }
 
     public void ClickViewProblems() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
         wait.until(ExpectedConditions.elementToBeClickable(ViewProblemsButton)).click();
         
         //driver.findElement(ProblemsNext).click();
@@ -313,9 +314,9 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(Unsolved)).click();
         driver.findElement(Solved).click();
         driver.findElement(ViewReportButton).click();
-        WebElement Logo = driver.findElement(KodNestButton);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click()", Logo);
+        WebElement HomeButton = driver.findElement(Home);
+        
+        js.executeScript("arguments[0].click();", HomeButton);
         //driver.findElement(StartPracticeButton).click();
         
     }
