@@ -6,9 +6,11 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/yallapuharshith/KodnestAutomation.git'
+                git branch: 'main',
+                    url: 'https://github.com/yallapuharshith/KodnestAutomation.git'
             }
         }
 
@@ -21,13 +23,13 @@ pipeline {
 
     post {
         success {
-            echo 'KodnestAutomation tests executed successfully'
+            echo 'KodnestAutomation tests executed successfully.'
         }
         failure {
             echo 'Test execution failed – check reports'
         }
         always {
-            echo 'Pipeline execution completed'
+            echo 'Pipeline execution completed.'
         }
     }
 }
