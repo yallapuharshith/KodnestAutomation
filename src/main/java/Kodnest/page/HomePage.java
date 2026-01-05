@@ -280,9 +280,9 @@ public class HomePage {
 
     public void ClickViewSyllabus() {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-        WebElement Syllabus = wait.until(ExpectedConditions.elementToBeClickable(ViewSyllabusButton)).click();
+        WebElement Syllabus = wait.until(ExpectedConditions.elementToBeClickable(ViewSyllabusButton));
 		js. executeScript ("arguments[0].click();",Syllabus);
-        WebElement Cont = wait.until(ExpectedConditions.elementToBeClickable(CourseContinueButton)).click();
+        WebElement Cont = wait.until(ExpectedConditions.elementToBeClickable(CourseContinueButton));
 		js.executeScript("arguments[0].click();",Cont);
         wait.until(ExpectedConditions.elementToBeClickable(ModuleName)).click();
         wait.until(ExpectedConditions.elementToBeClickable(ViewFullSyllabus)).click();
