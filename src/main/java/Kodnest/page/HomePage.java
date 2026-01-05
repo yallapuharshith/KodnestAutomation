@@ -287,7 +287,8 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(ModuleName)).click();
         wait.until(ExpectedConditions.elementToBeClickable(ViewFullSyllabus)).click();
         wait.until(ExpectedConditions.elementToBeClickable(CourseContinueButton)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(TopicName)).click();
+        WebElement TopicName = wait.until(ExpectedConditions.elementToBeClickable(TopicName));
+		js.executeScript("arguments[0].click();",TopicName);
         wait.until(ExpectedConditions.elementToBeClickable(ViewFullSyllabus)).click();
         wait.until(ExpectedConditions.elementToBeClickable(CourseContinueButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(ThemeSwitch)).click();
